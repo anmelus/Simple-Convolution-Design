@@ -1,0 +1,60 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MyDesign
+Version: P-2019.03-SP1
+Date   : Wed Nov 17 20:51:23 2021
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+Wire Load Model Mode: top
+
+  Startpoint: weight_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: plh1_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  weight_reg[1]/CK (DFF_X1)              0.0000     0.0000 r
+  weight_reg[1]/QN (DFF_X1)              0.6274     0.6274 r
+  U411/Z (XOR2_X1)                       0.5509     1.1783 r
+  U412/ZN (XNOR2_X1)                     0.4275     1.6058 r
+  U414/Z (XOR2_X1)                       0.5445     2.1502 r
+  U417/Z (XOR2_X1)                       0.5556     2.7059 r
+  U418/ZN (XNOR2_X1)                     0.4253     3.1312 r
+  U420/Z (XOR2_X1)                       0.5434     3.6746 r
+  U424/ZN (NOR2_X1)                      0.1034     3.7780 f
+  U328/ZN (AND2_X1)                      0.1999     3.9779 f
+  U314/ZN (OR2_X1)                       0.2167     4.1946 f
+  U434/ZN (XNOR2_X1)                     0.2515     4.4462 f
+  U326/ZN (OR4_X1)                       0.6961     5.1422 f
+  U436/ZN (NAND2_X1)                     0.1405     5.2827 r
+  U440/ZN (XNOR2_X1)                     0.3339     5.6166 r
+  U442/ZN (XNOR2_X1)                     0.3376     5.9542 r
+  U443/ZN (OAI22_X1)                     0.1526     6.1068 f
+  plh1_reg[3]/D (DFF_X1)                 0.0000     6.1068 f
+  data arrival time                                 6.1068
+
+  clock clk (rise edge)                  7.0000     7.0000
+  clock network delay (ideal)            0.0000     7.0000
+  clock uncertainty                     -0.0500     6.9500
+  plh1_reg[3]/CK (DFF_X1)                0.0000     6.9500 r
+  library setup time                    -0.3378     6.6122
+  data required time                                6.6122
+  -----------------------------------------------------------
+  data required time                                6.6122
+  data arrival time                                -6.1068
+  -----------------------------------------------------------
+  slack (MET)                                       0.5054
+
+
+1

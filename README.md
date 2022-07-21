@@ -1,1 +1,5 @@
 # Simple-Convolution-Design
+
+The purpose of this design is to act as a single stage convolution for use in a binary convolutional neural network. The implementation has a fixed size with a 4x4 input matrix and 3x3 kernel matrix. The design is interfaced by two SRAMs that contain information about the input and weight matrix as well as act as a destination for the resultant matrix. The algorithm uses a finite state machine that waits for a signal, “run/go,” and reads in the matrices. The matrices are sliced up to create the illusion of a sliding window and features are subsequently extracted through a crudely developed function. Once the final 2x2 result matrix is extracted, it is zero-padded with 12 bits to correctly format into the output SRAM. The total area used was approximately 680 um2 with a clock period of 7 ps. Although results were satisfactory, it is slightly irritating to not have an easily scalable solution. 
+
+See more information on the overall design, timings, and area in the Project_Report folder.
